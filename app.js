@@ -1,9 +1,10 @@
-const amount = 12
+const app = require('express')();
 
-if(amount <10){
-    console.log('small number');
-} else {
-    console.log('no se que es esto')
-}
 
-console.log('hola yo que se')
+app.listen(5000, () => {
+    console.log('server in port 5000')
+})
+
+app.get('/', (req,res) => {
+    res.send('Home page')
+})
